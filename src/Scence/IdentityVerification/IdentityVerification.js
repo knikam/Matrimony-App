@@ -16,14 +16,14 @@ class IdentityVerification extends Component {
 
             <View style={style.front_view}> 
                  <Thumbnail style={style.upload_image}
-                 square source={}></Thumbnail>
+                 square ></Thumbnail>
                  <Text style={scan_txt}>
                      {assets.enstring.IdentityVerificationScreen.scan_front}</Text>
             </View>
 
             <View style={style.back_view}> 
                  <Thumbnail style={style.upload_image}
-                 square source={}></Thumbnail>
+                 square ></Thumbnail>
                  <Text style={scan_txt}>
                      {assets.enstring.IdentityVerificationScreen.scan_back}</Text>
             </View>

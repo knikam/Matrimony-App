@@ -34,7 +34,8 @@ export class SignUp extends Component {
                                      
 
                     <Button style={style.generateopt_btn}
-                    danger block>
+                    danger block
+                    onPress={()=>this.props.navigation.navigate('VerifyNumber')}>
                         <Text style={style.generateopt_txt}>
                             {assets.enstring.SignUpScreen.generate_otp}</Text>
                     </Button>

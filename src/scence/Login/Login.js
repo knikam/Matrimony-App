@@ -30,7 +30,8 @@ export class Login extends Component {
                         placeholderTextColor={assets.color.grey}></Input>
                     <Button style={style.login_btn}
                     danger block
-                    onPress={()=>this.props.navigation.navigate('VerifyNumber')}>
+                   // onPress={()=>this.props.navigation.navigate('VerifyNumber')}
+                   >
                         <Text style={style.login_txt}>
                             {assets.enstring.LoginScreen.login}</Text>
                     </Button>

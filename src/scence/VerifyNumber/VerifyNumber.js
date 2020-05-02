@@ -32,6 +32,7 @@ export class VerifyNumber extends Component {
                     >{assets.enstring.VerificationScreen.code_not_receive}</Text>
 
                     <Text style={style.resend_txt}
+                        onPress={()=>this.props.navigation.navigate('SignUp_Detail')}
                      >{assets.enstring.VerificationScreen.resend}</Text>
 
                 </Content>

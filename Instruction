@@ -4,7 +4,7 @@ react-native run-android --no-jetifier
 then run this command 
 react-native start
 
-if development error occure run this command in terminal (linux)
+if development error occure then run this command in terminal (linux)
 adb -s <device name> reverse tcp:8081 tcp:8081
 
 device name search by this command

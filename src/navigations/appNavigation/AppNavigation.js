@@ -4,13 +4,13 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import assets from '../../assets/asset';
 
-import SplashScreen from '../../Scence/SplashScreen/Index';
-import LoginScreen from '../../Scence/Login/Index';
-import ForgetPassword from '../../Scence/ForgetPassword/Index';
-import SignUp from '../../Scence/Signup/Index';
-import VerifyNumber from '../../Scence/VerifyNumber/Index';
-import IdetityVerification from '../../Scence/IdentityVerification/Index';
-
+import SplashScreen from '../../scence/SplashScreen/Index';
+import LoginScreen from '../../scence/Login/Index';
+import ForgetPassword from '../../scence/ForgetPassword/Index';
+import SignUp from '../../scence/Signup/Index';
+import VerifyNumber from '../../scence/VerifyNumber/Index';
+import IdetityVerification from '../../scence/IdentityVerification/Index';
+import SignUp_Detail from '../../scence/SignUp_Detail/Index';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +18,7 @@ function App() {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SplashScreen"> 
+      <Stack.Navigator initialRouteName="SignUp_Detail"> 
         
         <Stack.Screen name="SplashScreen" 
         component={SplashScreen}
@@ -50,6 +50,12 @@ function App() {
         <Stack.Screen name="IdentityVerification"
         component={IdetityVerification}
         options={{title:"Identity Verification",
+        headerTintColor:assets.color.white,
+        headerStyle:{backgroundColor:"red"}}}/>
+
+        <Stack.Screen name="SignUp_Detail"
+        component={SignUp_Detail}
+        options={{title:"Details",
         headerTintColor:assets.color.white,
         headerStyle:{backgroundColor:"red"}}}/>
 

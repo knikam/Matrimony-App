@@ -36,6 +36,7 @@ export default StyleSheet.create({
         fontFamily:"san-serif",
         color:"grey",
         fontSize:25,
+        letterSpacing:1,
         marginTop:15,
     },
 

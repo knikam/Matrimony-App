@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container,Content, View, Thumbnail, Button } from 'native-base';
-import style from '../IdentityVerification/Style';
+import style from './Style';
 import assets from '../../assets/asset';
 
 class IdentityVerification extends Component {

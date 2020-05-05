@@ -86,7 +86,7 @@ export class SignUp_Detail extends PureComponent {
                             animationType={"fade"}
                             androidMode={"default"}
                             placeHolderText="Select date"
-                            textStyle={{ color: "green" }}
+                            textStyle={{ color: "red" }}
                             placeHolderTextStyle={{ color: "#d3d3d3" }}
                             onDateChange={this.setDate}
                             disabled={false}

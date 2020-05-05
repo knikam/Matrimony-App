@@ -11,6 +11,8 @@ import SignUp from '../../scence/Signup/Index';
 import VerifyNumber from '../../scence/VerifyNumber/Index';
 import IdetityVerification from '../../scence/IdentityVerification/Index';
 import SignUp_Detail from '../../scence/SignUp_Detail/Index';
+import MatchProfile from '../../scence/MatchProfile/Index';
+import MyProfifle from '../../scence/MyProfile/Index';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +20,7 @@ function App() {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SplashScreen"> 
+      <Stack.Navigator initialRouteName="MatchProfile"> 
         
         <Stack.Screen name="SplashScreen" 
         component={SplashScreen}
@@ -56,6 +58,18 @@ function App() {
         <Stack.Screen name="SignUp_Detail"
         component={SignUp_Detail}
         options={{title:"Details",
+        headerTintColor:assets.color.white,
+        headerStyle:{backgroundColor:"red"}}}/>
+
+        <Stack.Screen name="MatchProfile"
+        component={MatchProfile}
+        options={{title:"Match Profile",
+        headerTintColor:assets.color.white,
+        headerStyle:{backgroundColor:"red"}}}/>
+
+        <Stack.Screen name="MyProfile"
+        component={MyProfifle}
+        options={{title:"Profile",
         headerTintColor:assets.color.white,
         headerStyle:{backgroundColor:"red"}}}/>
 

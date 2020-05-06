@@ -20,7 +20,7 @@ function App() {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SplashScreen"> 
+      <Stack.Navigator initialRouteName="MatchProfile"> 
         
         <Stack.Screen name="SplashScreen" 
         component={SplashScreen}

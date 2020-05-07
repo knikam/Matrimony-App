@@ -4,13 +4,13 @@ Thumbnail,Tabs,View, Tab, Label} from 'native-base'
 import style from './Style';
 import assets from '../../assets/asset';
 import { ScrollView } from 'react-native-gesture-handler';
+import Footer from '../../component/Footer/Footer';
 
 export class MyProfile extends Component {
     render() {
         return (
             <Container style={style.container}>
                 <Content showsVerticalScrollIndicator={false}>
-
                     <Thumbnail square large source={assets.images.myprofile.big_image} style={style.top_image}/>
                     
                         <ScrollView horizontal style={style.image_gallary} showsHorizontalScrollIndicator={false}> 
@@ -74,25 +74,12 @@ export class MyProfile extends Component {
                                 <Label style={style.top_label}>Documents</Label>
                             </View>
                         </View>
-
                     </View>
                 </Content>
+                <Footer></Footer>
             </Container>
         )
     }
 }
 
 export default MyProfile
-
-{/* <View style={style.personal_info}>
-                                <View style={style.fix_label}> 
-                                    <Label style={style.fix}>Languages</Label>
-                                    <Label style={style.fix}>Education Qualifications.</Label>
-                                    <Label style={style.fix}>Employment Record</Label>
-                                </View>
-                                <View style={style.var_label}>
-                                    <Label style={style.var}>Marathi, Hindi, English, Tamil</Label>
-                                    <Label style={style.var}>Msc In Computer Science </Label>
-                                    <Label style={style.var}>Associate Professor 2018 to-Wards, School, Warje - Pune Lecture in computer science Government College - Warje Pune</Label>
-                                </View>
-                            </View> */}

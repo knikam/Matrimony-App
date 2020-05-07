@@ -1,5 +1,7 @@
 colors = {
-  theme: '#f8575b',
+  theme: '#fa575b',
+
+  
 
   black: '#000000',
   white: '#ffffff',

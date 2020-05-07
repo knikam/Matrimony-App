@@ -34,7 +34,6 @@ export default StyleSheet.create({
         backgroundColor:"#e6d9d9",
         flex:1,
         justifyContent:"center",
-        alignContent:"center"
     },
 
     gallary:{
@@ -101,4 +100,7 @@ export default StyleSheet.create({
         flex:3
     },
 
+    documents:{
+        marginTop:20
+    }
 });

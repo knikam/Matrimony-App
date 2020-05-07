@@ -34,44 +34,44 @@ function App() {
         component={ForgetPassword}
         options={{title:"Forgot Password",
         headerTintColor:assets.color.white,
-        headerStyle:{backgroundColor:"red"}}}/>
+        headerStyle:{backgroundColor:assets.color.theme }}}/>
 
         <Stack.Screen name="SignUp"
         component={SignUp}
         options={{title:"Sign Up",
         headerTintColor:assets.color.white,
-        headerStyle:{backgroundColor:"red"}}}/>
+        headerStyle:{backgroundColor:assets.color.theme}}}/>
 
 
         <Stack.Screen name="VerifyNumber"
         component={VerifyNumber}
         options={{title:"Verification",
         headerTintColor:assets.color.white,
-        headerStyle:{backgroundColor:"red"}}}/>
+        headerStyle:{backgroundColor:assets.color.theme}}}/>
 
         <Stack.Screen name="IdentityVerification"
         component={IdetityVerification}
         options={{title:"Identity Verification",
         headerTintColor:assets.color.white,
-        headerStyle:{backgroundColor:"red"}}}/>
+        headerStyle:{backgroundColor:assets.color.theme}}}/>
 
         <Stack.Screen name="SignUp_Detail"
         component={SignUp_Detail}
         options={{title:"Details",
         headerTintColor:assets.color.white,
-        headerStyle:{backgroundColor:"red"}}}/>
+        headerStyle:{backgroundColor:assets.color.theme}}}/>
 
         <Stack.Screen name="MatchProfile"
         component={MatchProfile}
         options={{title:"Match Profile",
         headerTintColor:assets.color.white,
-        headerStyle:{backgroundColor:"red"}}}/>
+        headerStyle:{backgroundColor:assets.color.theme}}}/>
 
         <Stack.Screen name="MyProfile"
         component={MyProfifle}
         options={{title:"Profile",
         headerTintColor:assets.color.white,
-        headerStyle:{backgroundColor:"red"}}}/>
+        headerStyle:{backgroundColor:assets.color.theme}}}/>
 
       </Stack.Navigator>
     </NavigationContainer>

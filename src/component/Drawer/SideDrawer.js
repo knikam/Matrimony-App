@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import { Container, Content } from 'native-base'
 
 export class SideDrawer extends Component {
     render() {
         return (
-            <div>
-                
-            </div>
+          <Container>
+              <Content>
+                  
+              </Content>
+          </Container>
         )
     }
 }

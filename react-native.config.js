@@ -1,10 +1,8 @@
-// react-native.config.js
 module.exports = {
-    dependencies: {
-      '<dependency>': {
-        platforms: {
-          android: null, // disable Android platform, other platforms will still autolink
-        },
-      },
+    project: {
+      ios: {},
+      android: {}, // grouped into "project"
     },
+    assets: ["./assets/fonts/"], // stays the same
   };
+  

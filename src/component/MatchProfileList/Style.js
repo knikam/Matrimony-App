@@ -16,27 +16,31 @@ export default StyleSheet.create({
         paddingBottom:8,
         marginBottom:5
     },
+
     row_view:{
         flexDirection:"row",
         alignContent:"space-around",
     },
+
     name:{
         color:assets.color.black,
         fontSize:16,
-        fontWeight:"400",
+        fontWeight:"bold",
         marginLeft:5,
         letterSpacing:.5
     },
 
     icon:{
-        marginTop:7,
+       height:15,
+       width:18,
+       marginTop:10,
     },
 
     info:{
         color:assets.color.grey,
         marginLeft:12,
         marginTop:9,
-        fontSize:13,
+        fontSize:14,
     },
 
     side_info:{
@@ -54,31 +58,27 @@ export default StyleSheet.create({
     },
     side:{
         color:"red",
-        fontSize:14,
+        fontSize:15,
         marginRight:5
     },
+
     profile_img:{
         marginTop:8
     },
-    image_view:{
-        borderRightColor:"grey",
-        borderWidth:.5,
-        borderRadius:8
-    },
+
     image:{
         height:height/5,
-        width:width/2.7,
-        borderRadius:8,
+        width:width/2.6,
+        borderRadius:4,
     },
     fav_icon:{ 
-        shadowRadius:8,
         position: "absolute",
-        width: 22,
-        height: 22,
-        bottom:15,
-        right:15,
-        borderRadius:8,
-        backgroundColor:"red"
+        backgroundColor:assets.color.theme,
+        width: 35,
+        height: 35,
+        bottom:0,
+        right:0,
+        borderRadius:4,
     }
     
 })

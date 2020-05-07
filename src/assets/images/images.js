@@ -1,18 +1,28 @@
 const images = {
-  couple: require('../images/bride.png'),
-  marrige: require ('../images/marrige.jpg'),
-  demo: require('../images/demo.jpg'),
+    couple: require('../images/bride.png'),
+    marrige: require ('../images/marrige.jpg'),
+    demo: require('../images/demo.jpg'),
 
  myprofile:{
     big_image:require("../images/MyProfile/Bitmap.png"),
     camera:require("../images/MyProfile/camera.png")
  },
 
+ matchprofile:{
+    address:require("../images/MatchProfile/address.png"),
+    education:require("../images/MatchProfile/mortarboard.png"),
+    work:require("../images/MatchProfile/work.png"),
+    live:require("../images/MatchProfile/place.png"),
+    like:require("../images/MatchProfile/heart.png"),
+    heart:require("../images/MatchProfile/heart.png"),
+    image:require("../images/MatchProfile/Bitmap.png")
+ },
+
  footer:{
-   call:require("../images/Footer/phone.png"),
-   whatsapp:require("../images/Footer/whatsapp.png"),
-   intrest:require("../images/Footer/cursor.png"),
-   astrology:require("../images/Footer/solar-system.png")
+    call:require("../images/Footer/phone.png"),
+    whatsapp:require("../images/Footer/whatsapp.png"),
+    intrest:require("../images/Footer/cursor.png"),
+    astrology:require("../images/Footer/solar-system.png")
  }
 
 };

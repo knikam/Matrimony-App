@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { View, Label, Thumbnail} from 'native-base'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import style from './Style'
+import assets from '../../assets/asset'
 
 export default class MatchProfileList extends PureComponent {
     render() {
@@ -11,10 +12,14 @@ export default class MatchProfileList extends PureComponent {
                     <Label style={style.name}>{this.props.data.name}</Label>
                     <View style={style.row_view}>
                         <View style={{marginTop:20}}>
-                            <Icon name="map-marker" size={22} color="#ff0000" style={style.icon,{marginLeft:3,marginTop:10}}></Icon>
-                            <Icon name="graduation-cap" size={16} color="#ff0000"  style={style.icon}></Icon>
-                            <Icon name="briefcase" size={16} color="#ff0000"  style={style.icon}></Icon>
-                            <Icon name="home" size={20} color="#ff0000"  style={style.icon}></Icon>
+                            <Thumbnail square source={assets.images.matchprofile.address}
+                                style={{height:15,width:15,marginTop:18,}}></Thumbnail>
+                            <Thumbnail square source={assets.images.matchprofile.education}
+                                style={{height:10,width:13,marginTop:13,}}></Thumbnail>
+                            <Thumbnail square source={assets.images.matchprofile.work}
+                                style={{height:11,width:13,marginTop:13,}}></Thumbnail>
+                            <Thumbnail square source={assets.images.matchprofile.live}
+                                style={{height:14,width:11,marginTop:15,}}></Thumbnail>
                         </View>
 
                         <View>
@@ -37,16 +42,17 @@ export default class MatchProfileList extends PureComponent {
                         <Label style={style.side}>{this.props.data.height}</Label>
                         <Label style={style.side}>ft</Label>
                         </View>
-                        <Icon style={{marginTop:1}} name="heart" size={16} color="red"></Icon>
+                        <Thumbnail square source={assets.images.matchprofile.heart}
+                                style={{height:18,width:20,marginTop:1,}}></Thumbnail>
                     </View>
                     <View style={style.profile_img}>
                         <View style={style.image_view}>
                         <Thumbnail square large style={style.image}
-                            source={{uri:"https://1.bp.blogspot.com/-s90Igf6AfVA/XlOsa0eCc7I/AAAAAAAACes/lFSc_wdHOgE0fSM5uJ4_aIMDEoSOXYpFQCLcBGAsYHQ/s640/25-most-beautiful-women-in-india14.jpg"}}></Thumbnail>
+                            source={assets.images.matchprofile.image}></Thumbnail>
                         </View>
                         <View style={style.fav_icon}>
-                            <Thumbnail square small
-                                source={{uri:"https://png.pngtree.com/png-vector/20190521/ourlarge/pngtree-add-heart-icon-png-image_1056914.jpg"}}></Thumbnail>
+                            {/* <Thumbnail square small
+                                source={{uri:"https://png.pngtree.com/png-vector/20190521/ourlarge/pngtree-add-heart-icon-png-image_1056914.jpg"}}></Thumbnail> */}
                         </View>
                     </View>
                 </View>

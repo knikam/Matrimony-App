@@ -50,7 +50,8 @@ export default StyleSheet.create({
         flex:1,
         fontSize:18,
         borderBottomWidth:2,
-        borderBottomColor:assets.color.grey
+        borderBottomColor:assets.color.grey,
+        
     },
 
     code_arrow:{

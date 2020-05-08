@@ -16,7 +16,7 @@ export default StyleSheet.create({
     title:{
         fontFamily:"san-serif",
         color:"grey",
-        fontSize:23,
+        fontSize:18,
         marginTop:height/20
     },
 
@@ -34,11 +34,22 @@ export default StyleSheet.create({
         marginEnd:12
     },
 
+    verifyopt_btn:{
+        backgroundColor:assets.color.theme,
+        borderRadius:2,
+        marginTop:40,
+        height:50
+    },
+
+    verify_txt:{
+        fontSize:15
+    },
+
     not_receive_txt:{
         alignSelf:"center",
         fontFamily:"san-serif",
         color:"grey",
-        fontSize:23,
+        fontSize:15,
         marginTop:height/15
 
     },
@@ -47,7 +58,7 @@ export default StyleSheet.create({
         alignSelf:"center",
         fontFamily:"san-serif",
         color:"red",
-        fontSize:20,
+        fontSize:18,
         marginTop:15
     }
 });

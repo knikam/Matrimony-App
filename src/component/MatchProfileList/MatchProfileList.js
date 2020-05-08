@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { View, Label, Thumbnail} from 'native-base'
-import Icon from 'react-native-vector-icons/FontAwesome'
 import style from './Style'
 import assets from '../../assets/asset'
 

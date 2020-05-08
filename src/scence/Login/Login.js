@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import{Container,Content,
-    Text, Thumbnail,Input, Button,View} from 'native-base';
+    Text, Thumbnail,Input, Button,View,Picker} from 'native-base';
 import assets from '../../assets/asset';
 import style from './Style';
 
 
 export class Login extends Component {
+    
+  
     render() {
         return (
             <Container style={style.Container}>
@@ -25,8 +27,9 @@ export class Login extends Component {
                         {assets.enstring.LoginScreen.mobile_no}</Text>
                    
                     <View style={style.number_view}>
-
+                    
                     <View style={{flex:.8}}>
+                   
                         <Input disabled style={style.code_input}
                             placeholder="+91"
                             placeholderTextColor={assets.color.grey}></Input>

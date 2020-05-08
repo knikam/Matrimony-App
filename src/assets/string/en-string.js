@@ -44,6 +44,7 @@ export default enstring = {
 
   VerificationScreen:{
     title:"You will get message with a\nconfirmation code to your mobile\nnumber send to",
+    verify:"Verify OTP",
     code_not_receive:"I did't receive the code",
     resend:"Resend",
     error:"Invalid Code, Please try again!"    

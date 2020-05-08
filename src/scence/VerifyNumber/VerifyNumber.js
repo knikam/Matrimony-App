@@ -26,7 +26,15 @@ export class VerifyNumber extends Component {
                         <Input style={style.input}></Input>
                         <Input style={style.input}></Input>
                         <Input style={style.input}></Input>
+                        <Input style={style.input}></Input>
                     </View>
+
+                    <Button style={style.verifyopt_btn}
+                    danger block
+                    onPress={()=>this.props.navigation.navigate('VerifyNumber')}>
+                        <Text style={style.verify_txt}>
+                            {assets.enstring.VerificationScreen.verify}</Text>
+                    </Button>
 
                     <Text style={style.not_receive_txt}
                     >{assets.enstring.VerificationScreen.code_not_receive}</Text>

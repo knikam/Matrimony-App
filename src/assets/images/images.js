@@ -3,6 +3,16 @@ const images = {
     marrige: require ('../images/marrige.jpg'),
     demo: require('../images/demo.jpg'),
 
+ splash:{
+   logo:require("../images/SplashScreen/Married.png"),
+   image:require("../images/SplashScreen/undraw.png")
+ },
+
+ login:{
+   logo:require("../images/SplashScreen/Married.png"),
+   arrow:require("../images/Login/download.png")
+ },
+
  myprofile:{
     big_image:require("../images/MyProfile/Bitmap.png"),
     camera:require("../images/MyProfile/camera.png")

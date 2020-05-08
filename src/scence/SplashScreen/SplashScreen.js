@@ -1,9 +1,3 @@
-/**
- * Project Name: Matrimony App
- * Module: Splash Screen
- * Author : Kalpesh Nikam
- * Email id : Kalpeshnikam1080@gmail.com
- */
 
 import React,{Component} from 'react';
 
@@ -18,17 +12,22 @@ export default class SplashScreen extends Component{
          return(
              <Container style={style.Container}>
                  <Content showsVerticalScrollIndicator={false}>
-                    <Thumbnail square
-                    style={style.topLogo}
-                    source={assets.images.couple}></Thumbnail>
+                    
+                    <View style={style.toplogo_view}>
+                    <Thumbnail square style={style.top_logo}
+                    source={assets.images.splash.logo}></Thumbnail>
+                    </View>
+
                     <Text style={style.hello_txt}>
                        {assets.enstring.SplashScreen.hello}</Text>
                     <Text style={style.welcome_txt}>
                        {assets.enstring.SplashScreen.welcome}</Text>
+
                     <Thumbnail square 
                     style={style.main_img}
-                    source={assets.images.marrige}></Thumbnail>
-                    <Button style={style.continue_btn} danger
+                    source={assets.images.splash.image}></Thumbnail>
+
+                    <Button style={style.continue_btn} 
                     block onPress={()=>this.props.navigation.replace("Login")}>
                         <Text style={style.continue_txt}>
                             {assets.enstring.SplashScreen.continue_with_mobile}</Text>

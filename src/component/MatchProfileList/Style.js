@@ -23,11 +23,12 @@ export default StyleSheet.create({
     },
 
     name:{
+        fontFamily:assets.font.poppins_medium,
         color:assets.color.black,
-        fontSize:16,
         fontWeight:"bold",
+        fontSize:16,
         marginLeft:5,
-        letterSpacing:.5
+        letterSpacing:.3
     },
 
     icon:{
@@ -37,6 +38,7 @@ export default StyleSheet.create({
     },
 
     info:{
+        fontFamily:assets.font.poppins_Regular,
         color:assets.color.grey,
         marginLeft:12,
         marginTop:9,

@@ -11,50 +11,84 @@ export default StyleSheet.create({
         flexDirection:"row",
         paddingStart:width/15,
         paddingEnd:width/15,
-        fontFamily:"san-serif"
     },
 
-    topLogo:{
-        height:height/8,
-        width:width/3.9,
-        backgroundColor:"red",
+    toplogo_view:{
+        height:77,
+        width:77,
+        backgroundColor:assets.color.theme,
         marginTop:50,
-        borderRadius:5,
-        shadowColor:"#000",
-        shadowOffset:{width:0,height:2},
-        shadowOpacity:0.2,
-        shadowRadius:3.84,
+        borderRadius:4,
+        justifyContent:"center"
+    },
+
+    top_logo:{
+        height:46,
+        width:55,
+        alignSelf:"center"
     },
 
     welcome_txt:{
-        fontFamily:"san-serif",
         fontWeight:"bold",
         color:"black",
-        fontSize:40,
+        fontSize:30,
         marginTop:height/20,
     },
 
     signIn_txt:{
-        fontFamily:"san-serif",
-        color:"grey",
-        fontSize:25,
+        color:assets.color.grey,
+        fontSize:18,
         marginTop:15,
     },
 
-    mobile_txt:{
-        fontSize:18,
-        color:assets.color.grey,
-        marginTop:40,
+    number_view:{
+        flex:4,
+        flexDirection:"row",
     },
 
-    mobile_input:{
+    code_input:{
+        flex:1,
         fontSize:18,
         borderBottomWidth:2,
         borderBottomColor:assets.color.grey
     },
 
-    password_txt:{
+    code_arrow:{
+        height:7,
+        width:8,
+        position:"absolute",
+        right:7,
+        bottom:22
+
+    },
+
+    hr_line:{
+        height:33,
+        width:1.5,
+        marginTop:10,
+        backgroundColor:assets.color.grey,
+        alignSelf:"center",
+        opacity:.8
+    },
+
+    mobile_txt:{
+        fontSize:15,
+        fontWeight:"bold",
+        color:assets.color.grey,
+        marginTop:40,
+    },
+
+    mobile_input:{
+        flex:3,
         fontSize:18,
+        borderBottomWidth:2,
+        borderBottomColor:assets.color.grey,
+        paddingLeft:15
+    },
+
+    password_txt:{
+        fontSize:15,
+        fontWeight:"bold",
         color:assets.color.grey,
         marginTop:25,
     },
@@ -66,6 +100,7 @@ export default StyleSheet.create({
     },
 
     login_btn:{
+        backgroundColor:assets.color.theme,
         borderRadius:2,
         marginTop:40,
         height:50
@@ -79,16 +114,16 @@ export default StyleSheet.create({
 
     account_txt:{
 
-        fontSize:18
+        fontSize:15
     },
     signUp_txt:{
-        color:"red",
-        fontSize:18,
+        color:assets.color.theme,
+        fontSize:15,
         textDecorationLine:'underline',
     },
 
     forgot_txt:{
-        fontSize:18,
+        fontSize:15,
         marginTop:20,
         alignSelf:"center"
     }

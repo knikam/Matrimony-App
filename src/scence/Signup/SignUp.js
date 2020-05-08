@@ -9,9 +9,11 @@ export class SignUp extends Component {
         return (
             <Container style={style.Container}>
                 <Content showsVerticalScrollIndicator={false}>
-                    <Thumbnail square
-                    style={style.topLogo}
-                    source={assets.images.couple}></Thumbnail>
+                    <View style={style.toplogo_view}>
+                        <Thumbnail square style={style.top_logo}
+                        source={assets.images.login.logo}></Thumbnail>
+                    </View>
+                    
                     <Text style={style.signup_txt}>
                     {assets.enstring.SignUpScreen.sign_up}</Text>
                     <Text style={style.signupmsg_txt}>
@@ -19,16 +21,21 @@ export class SignUp extends Component {
 
                     <Text style={style.mobile_txt}>
                         {assets.enstring.SignUpScreen.mobile_number}</Text>
-                    <View style={style.input_view}>
-
-                        <Input style={style.code_input}
-                            placeholder="+91"
-                            placeholderTextColor={assets.color.grey}>
-                                <Icon name="md-arrow-down"></Icon>
-                            </Input>
                         
+                    <View style={style.number_view}>
+
+                        <View style={{flex:.8}}>
+                            <Input disabled style={style.code_input}
+                                placeholder="+91"
+                                placeholderTextColor={assets.color.grey}></Input>
+                            <Thumbnail square style={style.code_arrow}
+                                source={assets.images.login.arrow}></Thumbnail>
+                        </View>
+
+                        <View style={style.hr_line}></View>
+
                         <Input style={style.mobile_input}
-                            placeholder={assets.enstring.SignUpScreen.mobile_placeholder}
+                            placeholder={assets.enstring.LoginScreen.mobile_placeholder}
                             placeholderTextColor={assets.color.grey}></Input>
                     </View>
                                      

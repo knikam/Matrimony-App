@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {Dimensions} from 'react-native';
+import assets from '../../assets/asset';
  
 let {width,height} = Dimensions.get('window');
 
@@ -12,50 +13,52 @@ export default StyleSheet.create({
         paddingEnd:width/15
     },
 
-    topLogo:{
-        height:height/8,
-        width:width/3.9,
-        backgroundColor:"red",
+    toplogo_view:{
+        height:77,
+        width:77,
+        backgroundColor:assets.color.theme,
         marginTop:50,
-        borderRadius:5,
-        shadowColor:"#000",
-        shadowOffset:{width:0,height:2},
-        shadowOpacity:0.2,
-        shadowRadius:3.84,
+        borderRadius:4,
+        justifyContent:"center"
+    },
+
+    top_logo:{
+        height:46,
+        width:55,
+        alignSelf:"center"
     },
 
     hello_txt:{
-        fontFamily:"san-serif",
         fontWeight:"bold",
-        color:"black",
-        fontSize:45,
-        marginTop:height/20,
+        color:assets.color.black,
+        fontSize:30,
+        marginTop:height/16,
     },
 
     welcome_txt:{
-        fontFamily:"san-serif",
-        color:"grey",
-        fontSize:25,
-        letterSpacing:1,
+        color:assets.color.grey,
+        fontSize:18,
+        letterSpacing:.2,
         marginTop:15,
     },
 
     main_img:{
-        height:height/3,
-        width:width,
+        height:height/4.5,
+        width:width/1.6,
         marginTop:30,
+        alignSelf:"center"
 
     },
 
     continue_btn:{
-        marginTop:20,
+        backgroundColor:assets.color.theme,
+        marginTop:40,
         borderRadius:5,
         justifyContent:"center",
         height:50
     },
 
     continue_txt:{
-        fontFamily:"san-serif",
         fontWeight:"600",
     },
 
@@ -66,13 +69,12 @@ export default StyleSheet.create({
     },
 
     account_txt:{
-        fontFamily:"san-serif",
-        fontSize:18
+        fontSize:15
     },
     signUp_txt:{
         fontFamily:"san-serif",
-        color:"red",
-        fontSize:18,
+        color:assets.color.theme,
+        fontSize:15,
         textDecorationLine:"underline"
     }
 });

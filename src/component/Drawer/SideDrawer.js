@@ -46,6 +46,64 @@ export class SideDrawer extends Component {
                             </View>
                             <View style={style.line}></View>
                             <View style={style.bottom_view}>
+                                <View style={style.row_view}>
+                                    <Thumbnail square style={{height:17,width:17}}
+                                    source={assets.images.drawer.user}></Thumbnail>
+                                    <Label style={style.label}>My Profile</Label>
+                                </View>
+                                <View style={style.row_view}>
+                                    <Thumbnail square style={{height:17,width:17}}
+                                    source={assets.images.drawer.user}></Thumbnail>
+                                    <Label style={style.label}>Matched Profiles</Label>
+                                </View>
+                                <View style={style.row_view}>
+                                    <Thumbnail square style={{height:17,width:17}}
+                                    source={assets.images.drawer.user}></Thumbnail>
+                                    <Label style={style.label}>New Profile</Label>
+                                </View>
+                                <View style={style.row_view}>
+                                    <Thumbnail square style={{height:17,width:17}}
+                                    source={assets.images.drawer.user}></Thumbnail>
+                                    <Label style={style.label}>Shortlisted</Label>
+                                </View>
+                                <View style={style.row_view}>
+                                    <Thumbnail square style={{height:17,width:17}}
+                                    source={assets.images.drawer.user}></Thumbnail>
+                                    <Label style={style.label}>My Contact</Label>
+                                </View>
+                                <View style={style.row_view}>
+                                    <Thumbnail square style={{height:17,width:17}}
+                                    source={assets.images.drawer.user}></Thumbnail>
+                                    <Label style={style.label}>Search by profile ID</Label>
+                                </View>
+                                <View style={style.row_view}>
+                                    <Thumbnail square style={{height:17,width:17}}
+                                    source={assets.images.drawer.user}></Thumbnail>
+                                    <Label style={style.label}>My Plans</Label>
+                                </View>
+
+                                <View style={style.center_line}></View>
+
+                                <View style={style.row_view}>
+                                    <Thumbnail square style={{height:17,width:17}}
+                                    source={assets.images.drawer.user}></Thumbnail>
+                                    <Label style={style.label}>Contact Us</Label>
+                                </View>
+                                <View style={style.row_view}>
+                                    <Thumbnail square style={{height:17,width:17}}
+                                    source={assets.images.drawer.user}></Thumbnail>
+                                    <Label style={style.label}>Rate Us</Label>
+                                </View>
+                                <View style={style.row_view}>
+                                    <Thumbnail square style={{height:17,width:17}}
+                                    source={assets.images.drawer.user}></Thumbnail>
+                                    <Label style={style.label}>Invite Friends</Label>
+                                </View>
+                                <View style={style.row_view}>
+                                    <Thumbnail square style={{height:17,width:17}}
+                                    source={assets.images.drawer.user}></Thumbnail>
+                                    <Label style={style.label}>Logout</Label>
+                                </View>
 
                             </View>
                         </View>

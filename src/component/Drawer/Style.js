@@ -1,7 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {Dimensions} from 'react-native';
 import assets from '../../assets/asset';
-import { transform } from '@babel/core';
  
 let {width,height} = Dimensions.get('window');
 
@@ -67,6 +66,7 @@ export default StyleSheet.create({
     left_text:{
         fontSize:10,
         alignSelf:"center",
+        marginTop:5
     },
 
     top_view:{
@@ -88,9 +88,28 @@ export default StyleSheet.create({
         height:1.5,
         width:width/1.5,
         backgroundColor:assets.color.grey,
-        marginLeft:10,
-        marginRight:10,
-        opacity:.4
-    }
+        marginRight:15,
+        opacity:.2
+    },
 
+    row_view:{
+        marginTop:20,
+        marginLeft:15,
+        flexDirection:"row"
+    },
+
+    label:{
+        color:"grey",
+        fontSize:15,
+        marginLeft:15,
+    },
+
+    center_line:{
+        height:1.5,
+        width:width/1.5,
+        backgroundColor:assets.color.grey,
+        marginTop:15,
+        marginRight:15,
+        opacity:.2
+    }, 
 })

@@ -1,22 +1,55 @@
 import React, { Component } from 'react'
-import { Container, Content } from 'native-base'
+import { Container, Content, 
+View,
+Label,
+Thumbnail} from 'native-base'
 import style from './Style'
+import assets from '../../assets/asset'
 
 export class SideDrawer extends Component {
     render() {
         return (
           <Container>
-              <Content>
                     <View style={style.main_view}>
+                        
                         <View style={style.left_view}>
+                           
+                            <View>
+                                <Thumbnail circular style={style.left_image}
+                                source={assets.images.myprofile.big_image}></Thumbnail>
+                                <View style={style.circular_loader}>
+                                    <View style={style.progress}>
+                                        <Label></Label>
+                                    </View>
+                                </View>
+                                <Label style={style.left_text}>Profile</Label>
+                                <Label style={style.left_text}>Completeness</Label>
+                            </View>
 
+                            <View style={style.side_bottom}>
+                                <Thumbnail square style={{height:19,width:19, marginTop:10}}
+                                    source={assets.images.drawer.share}></Thumbnail>
+
+                                <Thumbnail square style={{height:20,width:19,marginTop:20}}
+                                    source={assets.images.drawer.setting}></Thumbnail>
+
+                                <Thumbnail square style={{height:19,width:19, marginTop:20}}
+                                source={assets.images.drawer.help}></Thumbnail>
+                            </View>
                         </View>
                         
                         <View style={style.right_view}>
 
+                            <View style={style.top_view}>
+                                <Label style={style.name}>Shruti Marathe</Label>
+                                <Label style={style.id}>SM11963SM</Label>
+                            </View>
+                            <View style={style.line}></View>
+                            <View style={style.bottom_view}>
+
+                            </View>
                         </View>
                     </View>
-              </Content>
           </Container>
         )
     }

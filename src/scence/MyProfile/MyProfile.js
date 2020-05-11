@@ -5,12 +5,24 @@ import style from './Style';
 import assets from '../../assets/asset';
 import { ScrollView } from 'react-native-gesture-handler';
 import Footer from '../../component/Footer/Footer';
+import drawerNavigation from '../../navigations/drawerNavigation/drawerNavigation';
+import SideDrawer from '../../component/Drawer/SideDrawer';
 
 export class MyProfile extends Component {
     render() {
         return (
             <Container style={style.container}>
-                <Content showsVerticalScrollIndicator={false}>
+                    <SideDrawer></SideDrawer>
+            </Container>
+        )
+    }
+}
+
+export default MyProfile
+
+
+
+{/* <Content showsVerticalScrollIndicator={false}>
                     <Thumbnail square large source={assets.images.myprofile.big_image} style={style.top_image}/>
                     
                         <ScrollView horizontal style={style.image_gallary} showsHorizontalScrollIndicator={false}> 
@@ -76,10 +88,4 @@ export class MyProfile extends Component {
                         </View>
                     </View>
                 </Content>
-                <Footer></Footer>
-            </Container>
-        )
-    }
-}
-
-export default MyProfile
+                <Footer></Footer> */}

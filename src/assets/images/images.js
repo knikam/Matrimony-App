@@ -1,7 +1,5 @@
 const images = {
-    couple: require('../images/bride.png'),
-    marrige: require ('../images/marrige.jpg'),
-    demo: require('../images/demo.jpg'),
+   
 
  splash:{
    logo:require("../images/SplashScreen/Married.png"),
@@ -11,6 +9,13 @@ const images = {
  login:{
    logo:require("../images/SplashScreen/Married.png"),
    arrow:require("../images/Login/download.png")
+ },
+
+ drawer:{
+   share:require("../images/Drawer/share.png"),
+   setting:require("../images/Drawer/settings.png"),
+   help:require("../images/Drawer/question.png"),
+   user:require("../images/Drawer/user.png")
  },
 
  myprofile:{

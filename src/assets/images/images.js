@@ -38,6 +38,17 @@ const images = {
     whatsapp:require("../images/Footer/whatsapp.png"),
     intrest:require("../images/Footer/cursor.png"),
     astrology:require("../images/Footer/solar-system.png")
+ },
+
+ contact_us:{
+    phone: require("../images/ContactUs/phone.png")
+ },
+
+ Setting:{
+    phone:require("../images/Setting/smartphone.png"),
+    privacy:require("../images/Setting/security.png"),
+    delete:require("../images/Setting/delete_user.png"),
+    back:require("../images/Setting/back.png")
  }
 
 };

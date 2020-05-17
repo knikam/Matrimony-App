@@ -15,7 +15,8 @@ const images = {
    share:require("../images/Drawer/share.png"),
    setting:require("../images/Drawer/settings.png"),
    help:require("../images/Drawer/question.png"),
-   user:require("../images/Drawer/user.png")
+   user:require("../images/Drawer/user.png"),
+   arrow_down:require("../images/Drawer/down-arrow.png")
  },
 
  myprofile:{

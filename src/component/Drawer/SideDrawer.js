@@ -5,8 +5,24 @@ Label,
 Thumbnail} from 'native-base'
 import style from './Style'
 import assets from '../../assets/asset'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export class SideDrawer extends Component {
+
+    constructor(){
+        super();
+        
+        this.state={
+            expand:false,
+        }
+    }
+
+    onPressExpand(){
+        this.setState({
+            expand:!this.state.expand,
+        })
+    }
+
     render() {
         return (
           <Container>
@@ -66,11 +82,29 @@ export class SideDrawer extends Component {
                                     source={assets.images.drawer.user}></Thumbnail>
                                     <Label style={style.label}>Shortlisted</Label>
                                 </View>
-                                <View style={style.row_view}>
+                                <TouchableOpacity style={style.row_view} onPress={()=>this.onPressExpand()}>
                                     <Thumbnail square style={{height:17,width:17}}
                                     source={assets.images.drawer.user}></Thumbnail>
                                     <Label style={style.label}>My Contact</Label>
-                                </View>
+                                    <Thumbnail square style={{height:6,width:10,marginLeft:30,justifyContent:"flex-end",marginTop:8}}
+                                    source={assets.images.drawer.arrow_down}></Thumbnail>
+                                </TouchableOpacity>
+                               
+                                {this.state.expand?
+                                <View style={{marginLeft:20}}>
+                                    <View style={style.row_view}>
+                                        <Thumbnail square style={{height:17,width:17}}
+                                        source={assets.images.drawer.user}></Thumbnail>
+                                        <Label style={style.label}>9049609747</Label>
+                                    </View>
+
+                                    <View style={style.row_view}>
+                                        <Thumbnail square style={{height:17,width:17}}
+                                        source={assets.images.drawer.user}></Thumbnail>
+                                        <Label style={style.label}>Kalpeshnikam@gmail.com</Label>
+                                    </View>
+                                </View>:null}
+
                                 <View style={style.row_view}>
                                     <Thumbnail square style={{height:17,width:17}}
                                     source={assets.images.drawer.user}></Thumbnail>

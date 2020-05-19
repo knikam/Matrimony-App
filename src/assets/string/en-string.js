@@ -1,5 +1,6 @@
 
 export default enstring = {
+  
   SplashScreen: {
     hello: 'Hello,',
     welcome: "Welcome to world's no. 1 \nMatchMaking Service",
@@ -33,6 +34,10 @@ export default enstring = {
 
   },
 
+  SignUpDetail:{
+
+  },
+
   ForgotPasswordScreen:{
     
     forgot_password:"Forgot Password",
@@ -59,5 +64,41 @@ export default enstring = {
       biodata:"Biodata",
       skip:"Skip",
       continue:"Continue",
-  }
+  },
+
+  MyProfile:{
+
+  },
+
+  MatchProfile:{
+
+  },
+
+  VerifyNumber:{
+
+  },
+
+  Setting:{
+
+  },
+
+  SearchById:{
+
+  },
+
+  ChangePassword:{
+
+  },
+
+  ContactUs:{
+
+  },
+
+  DeactivateAcccount:{
+
+  },
+
+
+
+
 };

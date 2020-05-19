@@ -14,7 +14,10 @@ import SignUp_Detail from '../../scence/SignUp_Detail/Index';
 import MatchProfile from '../../scence/MatchProfile/Index';
 import MyProfifle from '../../scence/MyProfile/Index';
 import ContactUs from '../../scence/ContactUs/Index';
-import Setting from '../../scence/Setting/Setting';
+import Setting from '../../scence/Setting/Index';
+import ChangePassword from '../../scence/ChangePassword/Index';
+import SearchById from '../../scence/SearchById/Index';
+import DeactivateProfile from '../../scence/DeactivateProfile/DeactivateProfile';
 
 const Stack = createStackNavigator();
 
@@ -22,7 +25,7 @@ function App() {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="MyProfile"> 
+      <Stack.Navigator initialRouteName="DeactivateProfile"> 
         
         <Stack.Screen name="SplashScreen" 
         component={SplashScreen}
@@ -84,6 +87,24 @@ function App() {
         <Stack.Screen name="Setting"
         component={Setting}
         options={{title:"Setting",
+        headerTintColor:assets.color.white,
+        headerStyle:{backgroundColor:assets.color.theme}}}/>
+
+        <Stack.Screen name="ChangePassword"
+        component={ChangePassword}
+        options={{title:"Change Password",
+        headerTintColor:assets.color.white,
+        headerStyle:{backgroundColor:assets.color.theme}}}/>
+
+        <Stack.Screen name="SearchById"
+        component={SearchById}
+        options={{title:"Search By Profile Id",
+        headerTintColor:assets.color.white,
+        headerStyle:{backgroundColor:assets.color.theme}}}/>
+
+        <Stack.Screen name="DeactivateProfile"
+        component={DeactivateProfile}
+        options={{title:"Deactivate Profile",
         headerTintColor:assets.color.white,
         headerStyle:{backgroundColor:assets.color.theme}}}/>
 

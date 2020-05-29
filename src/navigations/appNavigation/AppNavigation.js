@@ -25,7 +25,7 @@ function App() {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="DeactivateProfile"> 
+      <Stack.Navigator initialRouteName="IdentityVerification"> 
         
         <Stack.Screen name="SplashScreen" 
         component={SplashScreen}

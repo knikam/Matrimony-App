@@ -1,3 +1,5 @@
+import IdentityVerification from "../../scence/IdentityVerification/IdentityVerification";
+
 const images = {
    
 
@@ -50,8 +52,11 @@ const images = {
     privacy:require("../images/Setting/security.png"),
     delete:require("../images/Setting/delete_user.png"),
     back:require("../images/Setting/back.png")
- }
+ },
 
+ Identity:{
+   upload:require("../images/Identity/upload.png"),
+ }
 };
 
 export default images;

@@ -57,7 +57,7 @@ export default enstring = {
 
   IdentityVerificationScreen:{
       Aadhar_card:"Aadhar Card",
-      front:"Fornt Side",
+      front:"Front Side",
       scan_front:"Scan aadhar card front Side",
       back:"Back Side",
       scan_back:"Scan aadhar card back Side",

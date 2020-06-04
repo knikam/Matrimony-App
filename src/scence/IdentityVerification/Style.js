@@ -11,7 +11,7 @@ export default StyleSheet.create({
 
     aadhar_txt:{
         fontSize:15,
-        color:assets.color.grey
+        color:"black"
     },
 
     upload_image:{
@@ -29,7 +29,7 @@ export default StyleSheet.create({
         height:120,
         marginTop:10,
         justifyContent:"center",
-        borderColor:assets.color.grey,
+        borderColor:"black",
         borderWidth:1,
         borderStyle:'dashed',
         borderRadius:1
@@ -44,7 +44,7 @@ export default StyleSheet.create({
         height:120,
         marginTop:10,
         justifyContent:"center",
-        borderColor:assets.color.grey,
+        borderColor:"black",
         borderWidth:1,
         borderStyle:'dashed',
         borderRadius:1,
@@ -52,7 +52,7 @@ export default StyleSheet.create({
 
     scan_txt:{
         fontSize:15,
-        color:assets.color.grey,
+        color:"black",
         alignSelf:"center"
     },
 
@@ -77,7 +77,7 @@ export default StyleSheet.create({
     continue_btn:{
         flex:1,
         height:50,
-        backgroundColor:assets.color.theme,
+        backgroundColor:"red",
         marginStart:15,
         justifyContent:"center"
     }

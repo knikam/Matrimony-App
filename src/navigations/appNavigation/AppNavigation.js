@@ -17,7 +17,8 @@ import ContactUs from '../../scence/ContactUs/Index';
 import Setting from '../../scence/Setting/Index';
 import ChangePassword from '../../scence/ChangePassword/Index';
 import SearchById from '../../scence/SearchById/Index';
-import DeactivateProfile from '../../scence/DeactivateProfile/DeactivateProfile';
+import DeactivateProfile from '../../scence/DeactivateProfile/Index';
+import Filter from "../../scence/Filter/Index"
 
 const Stack = createStackNavigator();
 
@@ -25,7 +26,7 @@ function App() {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="IdentityVerification"> 
+      <Stack.Navigator initialRouteName="Filter"> 
         
         <Stack.Screen name="SplashScreen" 
         component={SplashScreen}
@@ -105,6 +106,12 @@ function App() {
         <Stack.Screen name="DeactivateProfile"
         component={DeactivateProfile}
         options={{title:"Deactivate Profile",
+        headerTintColor:assets.color.white,
+        headerStyle:{backgroundColor:assets.color.theme}}}/>
+
+        <Stack.Screen name="Filter"
+        component={Filter}
+        options={{title:"Filter Profiles",
         headerTintColor:assets.color.white,
         headerStyle:{backgroundColor:assets.color.theme}}}/>
 

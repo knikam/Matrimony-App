@@ -28,12 +28,12 @@ export class SignUp_Detail extends PureComponent {
                 <Content showsVerticalScrollIndicator={false}>
                    <Form>
                         <Text style={style.label}>
-                        Profile for *</Text>
+                        Profile for <Text style={{color:assets.color.theme}}>*</Text></Text>
                         <Item picker style={style.picker}>
                             <Picker
                                 mode="dropdown"
                                 iosIcon={<Icon name="arrow-down" />}
-                                style={{ width: undefined }}
+                                style={{ fontSize:18 }}
                                 placeholder="Select your SIM"
                                 placeholderStyle={{ color: "#bfc6ea" }}
                                 placeholderIconColor="#007aff"
@@ -46,56 +46,70 @@ export class SignUp_Detail extends PureComponent {
                             </Picker>
                         </Item>
 
-                        <Item stackedLabel>
-                            <Label>Username</Label>
-                            <Input style={style.firstName_input}
+                        <Text style={style.label}>
+                        First Name <Text style={{color:assets.color.theme}}>*</Text></Text>
+                        
+                        <Input style={style.input}
                             placeholder="Enter first name"
                             placeholderTextColor={assets.color.grey}/>
-                        </Item>
 
-                        <Item stackedLabel>
-                            <Label>Username</Label>
-                            <Input style={style.firstName_input}
-                            placeholder="Enter first name"
-                            placeholderTextColor={assets.color.grey}/>
-                        </Item>
-
-                        <Item stackedLabel>
-                            <Label>Username</Label>
-                            <Input style={style.firstName_input}
-                            placeholder="Enter first name"
-                            placeholderTextColor={assets.color.grey}/>
-                        </Item>
+                           
 
                         <Text style={style.label}>
-                         Gender *</Text>
-                        <Item>
-                            <Radio selected={true} />
-                            <Radio selected={false} />
-                        </Item>
+                        Last Name <Text style={{color:assets.color.theme}}>*</Text></Text>
+                        
+                        <Input style={style.input}
+                            placeholder="Enter last name"
+                            placeholderTextColor={assets.color.grey}/>
+                    
 
-                        <Item stackedLabel>
-                            <Label>DOB *</Label>
-                            <DatePicker
-                            defaultDate={new Date()}
-                            minimumDate={new Date(2018, 1, 1)}
-                            maximumDate={new Date()}
-                            locale={"en"}
-                            timeZoneOffsetInMinutes={undefined}
-                            modalTransparent={false}
-                            animationType={"fade"}
-                            androidMode={"default"}
-                            placeHolderText="Select date"
-                            textStyle={{ color: "red" }}
-                            placeHolderTextStyle={{ color: "#d3d3d3" }}
-                            onDateChange={this.setDate}
-                            disabled={false}
-                            />
-                        </Item>
+                        <Text style={style.label}>
+                        Email Id <Text style={{color:assets.color.theme}}>*</Text></Text>
+                        
+                        <Input style={style.input}
+                            placeholder="Enter Email Id"
+                            placeholderTextColor={assets.color.grey}/>
                         
 
                         <Text style={style.label}>
-                        Main cast *</Text>
+                        Gender <Text style={{color:assets.color.theme}}>*</Text></Text>
+                        <Item style={{marginTop:10,marginBottom:10,borderBottomWidth:0}}>
+                            <View style={{flexDirection:"row",marginRight:20}}>
+                                <Radio color={assets.color.theme}
+                                selectedColor={assets.color.theme}
+                                selected={true} />
+                                <Text style={{marginLeft:15,marginTop:2}}>Male</Text>
+                            </View>
+                            <View style={{flexDirection:"row"}}>
+                                <Radio 
+                                color={assets.color.theme}
+                                selectedColor={assets.color.theme}
+                                selected={false} />
+                                <Text style={{marginLeft:15,marginTop:2}}>Female</Text>
+                            </View>
+                        </Item>
+
+                        <Text style={style.label}>
+                        DOB <Text style={{color:assets.color.theme}}>*</Text></Text>
+                        <View style={style.input}>
+                            <DatePicker
+                                defaultDate={new Date()}
+                                minimumDate={new Date(2018, 1, 1)}
+                                maximumDate={new Date()}
+                                locale={"en"}
+                                animationType={"fade"}
+                                androidMode={"default"}
+                                placeHolderText="Select date"
+                                textStyle={{ color: assets.color.theme }}
+                                placeHolderTextStyle={{ color: "#d3d3d3" }}
+                                onDateChange={this.setDate}
+                            />  
+                        </View>
+                         
+                        
+
+                        <Text style={style.label}>
+                        Main Caste <Text style={{color:assets.color.theme}}>*</Text></Text>
                         <Item picker style={style.picker}>
                             <Picker
                                 mode="dropdown"
@@ -112,9 +126,8 @@ export class SignUp_Detail extends PureComponent {
 
                             </Picker>
                         </Item>
-
                         <Text style={style.label}>
-                        cast *</Text>
+                        Caste <Text style={{color:assets.color.theme}}>*</Text></Text>
                         <Item picker style={style.picker}>
                             <Picker
                                 mode="dropdown"

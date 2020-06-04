@@ -13,18 +13,30 @@ export default StyleSheet.create({
 
     label:{
         color:assets.color.grey,
-        fontSize:15,
+        fontSize:14,
         marginLeft:15,
         marginTop:10
     },
     picker:{
-        marginLeft:15
+        marginLeft:15,
+        marginRight:15,
+        borderBottomColor:assets.color.grey
     },
+
+    input:{
+        fontSize:18,
+        marginLeft:15,
+        marginRight:15,
+        borderBottomWidth:1,
+        borderBottomColor:assets.color.grey
+    },
+
     signup_btn:{
+        height:50,
         borderRadius:2,
         marginTop:40,
         marginLeft:20,
         marginRight:20,
-        height:50
+        marginBottom:10,
     }
 })

@@ -26,7 +26,7 @@ function App() {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Filter"> 
+      <Stack.Navigator initialRouteName="SignUp_Detail"> 
         
         <Stack.Screen name="SplashScreen" 
         component={SplashScreen}

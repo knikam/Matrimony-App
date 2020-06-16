@@ -6,10 +6,14 @@ let {width,height} = Dimensions.get('window');
 
 export default StyleSheet.create({
 
+    container:{
+        backgroundColor:"#ffffff"
+    },
+
     main_view:{
         height:height,
         width:width/1.2,
-        flexDirection:"row"
+        flexDirection:"row",
     },
 
     left_view:{

@@ -18,7 +18,9 @@ import Setting from '../../scence/Setting/Index';
 import ChangePassword from '../../scence/ChangePassword/Index';
 import SearchById from '../../scence/SearchById/Index';
 import DeactivateProfile from '../../scence/DeactivateProfile/Index';
-import Filter from "../../scence/Filter/Index"
+import Filter from "../../scence/Filter/Index";
+import SideDrawer from "../../component/Drawer/SideDrawer";
+
 
 const Stack = createStackNavigator();
 
@@ -26,7 +28,7 @@ function App() {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SignUp_Detail"> 
+      <Stack.Navigator initialRouteName="SplashScreen"> 
         
         <Stack.Screen name="SplashScreen" 
         component={SplashScreen}
@@ -69,15 +71,11 @@ function App() {
 
         <Stack.Screen name="MatchProfile"
         component={MatchProfile}
-        options={{title:"Match Profile",
-        headerTintColor:assets.color.white,
-        headerStyle:{backgroundColor:assets.color.theme}}}/>
+        options={{title:null,headerShown:false}}/>
 
         <Stack.Screen name="MyProfile"
         component={MyProfifle}
-        options={{title:"Profile",
-        headerTintColor:assets.color.white,
-        headerStyle:{backgroundColor:assets.color.theme}}}/>
+        options={{title:null,headerShown:false}}/>
 
         <Stack.Screen name="ContactUs"
         component={ContactUs}
@@ -114,6 +112,10 @@ function App() {
         options={{title:"Filter Profiles",
         headerTintColor:assets.color.white,
         headerStyle:{backgroundColor:assets.color.theme}}}/>
+
+        <Stack.Screen name="Drawer"
+        component={SideDrawer}
+        options={{title:null,headerShown:false}}/>
 
       </Stack.Navigator>
     </NavigationContainer>

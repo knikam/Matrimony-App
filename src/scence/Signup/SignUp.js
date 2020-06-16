@@ -1,10 +1,44 @@
 import React, { Component } from 'react';
 import{Container,Content,
-    Text, Thumbnail,Input, Button,View, Icon,} from 'native-base';
+    Text, Thumbnail,Input, Button,View, Icon,Item,Picker} from 'native-base';
+import axios from 'axios';
 import assets from '../../assets/asset';
 import style from './Style'
+import API_URL from '../../constant/Index'
 
 export class SignUp extends Component {
+    
+    constructor(props){
+        super(props)
+
+        this.state={
+            
+            coutry_code:"+91",
+            mobileNo:""
+        }
+    }
+
+    onValueChange(value){
+        this.setState({
+            coutry_code:value
+        });
+    }
+
+    onSignUp(){
+       
+        fetch(API_URL+"/signup",{
+            method:"post",
+           body: JSON.stringify({
+               
+                phoneno: '+919049609747',
+
+            })
+            }).then(response => console.log(response))
+            .catch(err=>console.log(err));
+        console.log("Check")
+    }
+
+
     render() {
         return (
             <Container style={style.Container}>
@@ -24,13 +58,23 @@ export class SignUp extends Component {
                         
                     <View style={style.number_view}>
 
-                        <View style={{flex:.8}}>
-                            <Input disabled style={style.code_input}
-                                placeholder="+91"
-                                placeholderTextColor={assets.color.grey}></Input>
-                            <Thumbnail square style={style.code_arrow}
-                                source={assets.images.login.arrow}></Thumbnail>
-                        </View>
+                    <Item style={{width:90,borderBottomWidth:2,borderBottomColor:assets.color.grey,marginTop:-6,paddingTop:4}}>
+                        <Picker
+                            mode="dropdown"
+                            iosIcon={<Icon name="arrow-down" />}
+                            style={{ fontSize:18,width:6}}
+                            placeholder="Select your SIM"
+                            placeholderStyle={{ color: "#bfc6ea" }}
+                            placeholderIconColor="#007aff"
+                            selectedValue={this.state.coutry_code}
+                            onValueChange={this.onValueChange.bind(this)}
+                            >
+
+                            <Picker.Item label="+91" value="+91" />
+                            <Picker.Item label="+92" value="+92" />
+
+                        </Picker>
+                    </Item>
 
                         <View style={style.hr_line}></View>
 
@@ -42,7 +86,7 @@ export class SignUp extends Component {
 
                     <Button style={style.generateopt_btn}
                     danger block
-                    onPress={()=>this.props.navigation.navigate('VerifyNumber')}>
+                    onPress={()=>this.onSignUp()}>
                         <Text style={style.generateopt_txt}>
                             {assets.enstring.SignUpScreen.generate_otp}</Text>
                     </Button>

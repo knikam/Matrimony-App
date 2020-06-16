@@ -35,7 +35,8 @@ export default class SplashScreen extends Component{
                     <View style={style.bottom_view}>
                         <Text style={style.account_txt}>
                             {assets.enstring.SplashScreen.dont_have_account}</Text>
-                        <Text style={style.signUp_txt}>
+                        <Text style={style.signUp_txt} 
+                        onPress={()=>this.props.navigation.navigate("SignUp")}>
                             {assets.enstring.SplashScreen.sign_up}</Text>
                     </View>
                  </Content>

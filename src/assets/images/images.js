@@ -56,6 +56,10 @@ const images = {
 
  Identity:{
    upload:require("../images/Identity/upload.png"),
+ },
+
+ Menu:{
+    Side_Menu:require("../images/Menu/menu_dot.png"),
  }
 };
 

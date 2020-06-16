@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Content, View, Thumbnail, Label } from 'native-base'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import assets from '../../assets/asset'
 import style from "./Style"
 
@@ -26,21 +27,29 @@ export class Setting extends Component {
                         </View>
                         
                         <View style={{flex:5}}>
-                            <Label style={style.label}>Change Password</Label>
-                            <Label style={style.label}>Change Phone</Label>
-                            <Label style={style.label}>Privacy Setting</Label> 
-                            <Label style={style.label}>Delete Profile</Label>
+                            <TouchableOpacity onPress={()=>this.props.navigation.navigate("ChangePassword")}>
+                                <Label style={style.label}>Change Password</Label>
+                            </TouchableOpacity>
+                                <Label style={style.label}>Change Phone</Label>
+                                <Label style={style.label}>Privacy Setting</Label> 
+                            <TouchableOpacity onPress={()=>this.props.navigation.navigate("DeactivateProfile")}>
+                                <Label style={style.label}>Delete Profile</Label>
+                            </TouchableOpacity>
                         </View>
 
                         <View style={{flex: 1}}>
-                            <Thumbnail square style={style.arrow}
-                                source={assets.images.Setting.back}></Thumbnail>
-                            <Thumbnail square style={style.arrow}
-                                source={assets.images.Setting.back}></Thumbnail>
-                            <Thumbnail square style={style.arrow}
-                                source={assets.images.Setting.back}></Thumbnail>
-                            <Thumbnail square style={style.arrow}
-                                source={assets.images.Setting.back}></Thumbnail>
+                            <TouchableOpacity onPress={()=>this.props.navigation.navigate("ChangePassword")}>
+                                <Thumbnail square style={style.arrow}
+                                    source={assets.images.Setting.back}></Thumbnail>
+                            </TouchableOpacity>
+                                <Thumbnail square style={style.arrow}
+                                    source={assets.images.Setting.back}></Thumbnail>
+                                <Thumbnail square style={style.arrow}
+                                    source={assets.images.Setting.back}></Thumbnail>
+                            <TouchableOpacity onPress={()=>this.props.navigation.navigate("DeactivateProfile")}>
+                                <Thumbnail square style={style.arrow}
+                                    source={assets.images.Setting.back}></Thumbnail>
+                            </TouchableOpacity>
                         </View>
                    </View>
                </Content>

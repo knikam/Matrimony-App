@@ -13,6 +13,12 @@ export default StyleSheet.create({
         paddingEnd:width/15,
     },
 
+    picker:{
+        marginLeft:15,
+        marginRight:15,
+        borderBottomColor:assets.color.grey
+    },
+
     toplogo_view:{
         height:77,
         width:77,

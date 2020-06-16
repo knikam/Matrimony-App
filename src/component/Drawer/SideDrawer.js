@@ -25,7 +25,7 @@ export class SideDrawer extends Component {
 
     render() {
         return (
-          <Container>
+          <Container style={style.container}>
                     <View style={style.main_view}>
                         
                         <View style={style.left_view}>
@@ -43,11 +43,14 @@ export class SideDrawer extends Component {
                             </View>
 
                             <View style={style.side_bottom}>
-                                <Thumbnail square style={{height:19,width:19, marginTop:10}}
-                                    source={assets.images.drawer.share}></Thumbnail>
 
-                                <Thumbnail square style={{height:20,width:19,marginTop:20}}
-                                    source={assets.images.drawer.setting}></Thumbnail>
+                                <Thumbnail square style={{height:19,width:19, marginTop:10}}
+                                        source={assets.images.drawer.share}></Thumbnail>
+
+                                <TouchableOpacity onPress={()=>this.props.navigation.replace("Setting")}>
+                                    <Thumbnail square style={{height:20,width:19,marginTop:20}}
+                                        source={assets.images.drawer.setting}></Thumbnail>
+                                </TouchableOpacity>
 
                                 <Thumbnail square style={{height:19,width:19, marginTop:20}}
                                 source={assets.images.drawer.help}></Thumbnail>
@@ -65,12 +68,16 @@ export class SideDrawer extends Component {
                                 <View style={style.row_view}>
                                     <Thumbnail square style={{height:17,width:17}}
                                     source={assets.images.drawer.user}></Thumbnail>
-                                    <Label style={style.label}>My Profile</Label>
+                                    <TouchableOpacity onPress={()=>this.props.navigation.replace("MyProfile")}>
+                                        <Label style={style.label}>My Profile</Label>
+                                    </TouchableOpacity>
                                 </View>
                                 <View style={style.row_view}>
                                     <Thumbnail square style={{height:17,width:17}}
                                     source={assets.images.drawer.user}></Thumbnail>
-                                    <Label style={style.label}>Matched Profiles</Label>
+                                    <TouchableOpacity onPress={()=>this.props.navigation.goBack(null)}>
+                                       <Label style={style.label}>Matched Profiles</Label>
+                                    </TouchableOpacity>
                                 </View>
                                 <View style={style.row_view}>
                                     <Thumbnail square style={{height:17,width:17}}
@@ -108,7 +115,9 @@ export class SideDrawer extends Component {
                                 <View style={style.row_view}>
                                     <Thumbnail square style={{height:17,width:17}}
                                     source={assets.images.drawer.user}></Thumbnail>
-                                    <Label style={style.label}>Search by profile ID</Label>
+                                    <TouchableOpacity onPress={()=>this.props.navigation.replace("SearchById")}>
+                                        <Label style={style.label}>Search by profile ID</Label>
+                                    </TouchableOpacity>
                                 </View>
                                 <View style={style.row_view}>
                                     <Thumbnail square style={{height:17,width:17}}
@@ -121,7 +130,9 @@ export class SideDrawer extends Component {
                                 <View style={style.row_view}>
                                     <Thumbnail square style={{height:17,width:17}}
                                     source={assets.images.drawer.user}></Thumbnail>
+                                     <TouchableOpacity onPress={()=>this.props.navigation.replace("ContactUs")}>
                                     <Label style={style.label}>Contact Us</Label>
+                                    </TouchableOpacity>
                                 </View>
                                 <View style={style.row_view}>
                                     <Thumbnail square style={{height:17,width:17}}

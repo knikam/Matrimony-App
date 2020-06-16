@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Content,
-Thumbnail,Tabs,View, Tab, Label} from 'native-base'
+Thumbnail,Tabs,View, Tab, Label,Header,Left,Right,Button,Icon,Body,Title} from 'native-base'
 import style from './Style';
 import assets from '../../assets/asset';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -12,7 +12,21 @@ export class MyProfile extends Component {
     render() {
         return (
             <Container style={style.container}>
-                    <Content showsVerticalScrollIndicator={false}>
+                <Header style={{backgroundColor:assets.color.theme}}>
+                    <Left>
+                        <Button
+                            transparent
+                            onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+                            <Icon name="menu" />
+                        </Button>
+                    </Left>
+                    <Body>
+                        <Title>HomeScreen</Title>
+                    </Body>
+                    <Right />
+                </Header>
+                
+                <Content showsVerticalScrollIndicator={false}>
                     <Thumbnail square large source={assets.images.myprofile.big_image} style={style.top_image}/>
                     
                         <ScrollView horizontal style={style.image_gallary} showsHorizontalScrollIndicator={false}> 

@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import{Container,Content,
     Text, Thumbnail,Input, Button,View, Icon,Item,Picker} from 'native-base';
-import axios from 'axios';
 import assets from '../../assets/asset';
 import style from './Style'
-import API_URL from '../../constant/Index'
 
 export class SignUp extends Component {
     
@@ -23,21 +21,6 @@ export class SignUp extends Component {
             coutry_code:value
         });
     }
-
-    onSignUp(){
-       
-        fetch(API_URL+"/signup",{
-            method:"post",
-           body: JSON.stringify({
-               
-                phoneno: '+919049609747',
-
-            })
-            }).then(response => console.log(response))
-            .catch(err=>console.log(err));
-        console.log("Check")
-    }
-
 
     render() {
         return (

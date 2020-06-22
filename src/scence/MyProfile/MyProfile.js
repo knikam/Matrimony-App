@@ -5,7 +5,6 @@ import style from './Style';
 import assets from '../../assets/asset';
 import { ScrollView } from 'react-native-gesture-handler';
 import Footer from '../../component/Footer/Footer';
-import DrawerNavigation from '../../navigations/drawerNavigation/DrawerNavigation';
 
 
 export class MyProfile extends Component {

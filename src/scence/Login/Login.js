@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import{Container,Content,
-    Text, Thumbnail,Input, Button,View,Picker,Icon,Item} from 'native-base';
+import{Container,Content,Text, Thumbnail,Input, Button,View,Picker,Icon,Item} from 'native-base';
+import {connect} from 'react-redux';
 import assets from '../../assets/asset';
 import style from './Style';
+
+import UserAction from "../../actions/userAction"
 
 
 export class Login extends Component {
@@ -11,7 +13,9 @@ export class Login extends Component {
         super(props)
 
         this.state={
-            coutry_code:"+91"
+            coutry_code:"+91",
+            password:"",
+            mobile_no:"",
         }
     }
 
@@ -19,6 +23,14 @@ export class Login extends Component {
         this.setState({
             coutry_code:value
         })
+    }
+
+    doLogin(){
+        let {mobile_no, password}= this.state;
+        this.props.login(JSON.Stringify({
+            username:this.state.country_code+mobile_no,
+            password:password
+        }))    
     }
   
 
@@ -51,8 +63,7 @@ export class Login extends Component {
                             placeholderStyle={{ color: "#bfc6ea" }}
                             placeholderIconColor="#007aff"
                             selectedValue={this.state.coutry_code}
-                            onValueChange={this.onValueChange.bind(this)}
-                            >
+                            onValueChange={(country_code)=> this.setState({country_code})}>
 
                             <Picker.Item label="+91" value="+91" />
                             <Picker.Item label="+92" value="+92" />
@@ -64,19 +75,22 @@ export class Login extends Component {
 
                     <Input style={style.mobile_input}
                         placeholder={assets.enstring.LoginScreen.mobile_placeholder}
-                        placeholderTextColor={assets.color.grey}></Input>
+                        placeholderTextColor={assets.color.grey}
+                        onChangeText={(mobile_no)=>this.setState({mobile_no})}></Input>
                     </View>
                     
                     <Text style={style.password_txt}>
                         {assets.enstring.LoginScreen.password}</Text>
                     
-                    <Input secureTextEntry={true} style={style.password_input}
+                    <Input secureTextEntry={true} 
+                        style={style.password_input}
                         placeholder={assets.enstring.LoginScreen.password_placehoder}
-                        placeholderTextColor={assets.color.grey}></Input>
+                        placeholderTextColor={assets.color.grey}
+                        onChangeText={(password)=>this.setState({password})}></Input>
                     
                     <Button style={style.login_btn}
                     danger block
-                    onPress={()=>this.props.navigation.replace('MatchProfile')}>
+                    onPress={()=>{this.doLogin()}}>
                     <Text style={style.login_txt}>
                         {assets.enstring.LoginScreen.login}</Text>
                     </Button>
@@ -98,4 +112,18 @@ export class Login extends Component {
     }
 }
 
-export default Login
+const mapStateToProps = (state) => {
+    return {
+        isLogged: state.login.isLogged,
+        hasError : state.login.hasError,
+        isLoading: state.login.isLoading,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        login: (user) => dispatch(UserActions.login(user))
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

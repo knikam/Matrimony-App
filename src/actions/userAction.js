@@ -13,7 +13,7 @@ const isLogin=(status)=>{
 
 const hasError = (status,error) => {
     return {
-        type: actionTypes.LOGIN_HAS_ERROR,
+        type: actionTypes.LOGIN_FAILURE,
         isError: status,
         data:error
     }

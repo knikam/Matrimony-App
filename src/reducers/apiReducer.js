@@ -1,17 +1,17 @@
-import * as actionType from "../constant/actionType";
+import * as actionType from '../constant/actionType';
 
-const initialState={
-    isLoading:false,
-}
+const initialState = {
+  isLoading: false,
+};
 
-export default (state=initialState, action)=>{
+export default (state = initialState, action) => {
+  switch (action.actionType) {
+    case actionType.API_REQUEST:
+      // eslint-disable-next-line no-labels
+      isLoading: action.isLoading;
+      break;
 
-    switch (action.actionType) {
-        case actionType.API_REQUEST:
-            isLoading:action.isLoading,
-            break;
-    
-        default:
-            state;
-    }
-}
+    default:
+      state;
+  }
+};
